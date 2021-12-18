@@ -12,7 +12,7 @@ plugins {
 }
 
 group = "io.zachbr"
-version = "1.4.2-SNAPSHOT"
+version = "1.4.3-SNAPSHOT"
 
 val targetJVM = JavaVersion.VERSION_1_8.toString()
 
@@ -24,7 +24,7 @@ repositories {
 
 dependencies {
     implementation("org.kitteh.irc:client-lib:8.0.0")
-    implementation("club.minnced:discord-webhooks:0.7.2")
+    implementation("club.minnced:discord-webhooks:0.7.4")
     implementation("net.dv8tion:JDA:4.3.0_346") {
         exclude(module = "opus-java")
     }
@@ -36,11 +36,11 @@ dependencies {
     implementation("com.atlassian.commonmark:commonmark-ext-gfm-strikethrough:0.15.2")
 
     implementation("org.slf4j:slf4j-api:1.7.32")
-    implementation("org.apache.logging.log4j:log4j-core:2.16.0")
-    runtimeOnly("org.apache.logging.log4j:log4j-slf4j-impl:2.16.0")
+    implementation("org.apache.logging.log4j:log4j-core:2.17.0")
+    runtimeOnly("org.apache.logging.log4j:log4j-slf4j-impl:2.17.0")
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
 }
 
 tasks {
@@ -106,6 +106,6 @@ fun getGitHash(): String {
 
 dependencyManagement {
     imports {
-        mavenBom("org.apache.logging.log4j:log4j-bom:2.16.0")
+        mavenBom("org.apache.logging.log4j:log4j-bom:2.17.0")
     }
 }
