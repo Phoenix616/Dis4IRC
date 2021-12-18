@@ -12,7 +12,7 @@ plugins {
 }
 
 group = "io.zachbr"
-version = "1.3.1-SNAPSHOT"
+version = "1.4.2-SNAPSHOT"
 
 val targetJVM = JavaVersion.VERSION_1_8.toString()
 
@@ -36,8 +36,8 @@ dependencies {
     implementation("com.atlassian.commonmark:commonmark-ext-gfm-strikethrough:0.15.2")
 
     implementation("org.slf4j:slf4j-api:1.7.32")
-    implementation("org.apache.logging.log4j:log4j-core:2.15.0")
-    runtimeOnly("org.apache.logging.log4j:log4j-slf4j-impl:2.15.0")
+    implementation("org.apache.logging.log4j:log4j-core:2.16.0")
+    runtimeOnly("org.apache.logging.log4j:log4j-slf4j-impl:2.16.0")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
@@ -106,6 +106,6 @@ fun getGitHash(): String {
 
 dependencyManagement {
     imports {
-        mavenBom("org.apache.logging.log4j:log4j-bom:2.15.0")
+        mavenBom("org.apache.logging.log4j:log4j-bom:2.16.0")
     }
 }
